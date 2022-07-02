@@ -1,7 +1,8 @@
-x = 0
-y = 1
-if x == y
-  p(42)
+case 42
+when 0
+  p(0)
+when 1
+  p(1)
 else
-  p(46)
+  p(2)
 end

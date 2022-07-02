@@ -44,6 +44,18 @@ def evaluate(tree, env)
       else
         evaluate(tree[3], env)
       end
+    when "while"
+      while evaluate(tree[1], env)
+        evaluate(tree[2], env)
+      end
+    when "<"
+      left = evaluate(tree[1], env)
+      right = evaluate(tree[2], env)
+      if left < right
+        true
+      else
+        false
+      end
     when "=="
       left = evaluate(tree[1], env)
       right = evaluate(tree[2], env)

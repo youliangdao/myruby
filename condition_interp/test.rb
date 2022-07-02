@@ -1,9 +1,12 @@
 require 'minruby'
 
 pp(minruby_parse("
-if 0 == 0
-  p(42)
+case 42
+when 0
+  p(0)
+when 1
+  p(1)
 else
-  p(43)
+  p(2)
 end
   "))
